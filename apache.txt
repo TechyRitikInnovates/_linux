@@ -1,0 +1,7 @@
+sudo apt install apache2
+sudo ufw allow apache
+sudo ufw enable
+sudo ufw status
+ifconfig //copy inet of 2nd para
+cat>index.html
+firefox index.html

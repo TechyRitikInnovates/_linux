@@ -1,0 +1,30 @@
+####server side
+sudo apt install samba
+sudo mkdir /share
+sudo chmod 777 /share
+sudo nano /etc/samba/smb.conf
+// at the end of the file -
+[my-samba-share]
+	path = /share
+	public = no
+	valid users = name1, name2, name3
+	read list =
+	write list =
+	browsable = yes
+	comment = "My Samba File Server"
+sudo testparm
+sudo useradd name1 -s /sbin/nologin
+sudo useradd name2 -s /sbin/nologin
+sudo useradd name3 -s /sbin/nologin
+sudo smbpasswd -a name1
+	password:
+sudo smbpasswd -a name2
+	password:
+sudo smbpasswd -a name3
+	password:
+sudo systemctl start smbd
+sudo systemctl start nmbd
+sudo systemctl enable smbd nmbd
+
+####client side
+\\ip

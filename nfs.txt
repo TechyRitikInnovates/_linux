@@ -1,0 +1,19 @@
+####server side
+sudo apt install nfs-kernel-server
+sudo /etc/init.d/nfs-kernel-server status
+mkdir /nfs_share
+cd /nfs_share
+touch 1 2 3
+sudo chmod 777 /nfs-share
+sudo nano /etc/exports
+ifconfig
+// add this line at end- /nfs_share ip_address(rw,sync)
+sudo /etc/init.d/nfs-kernel-server restart
+
+####client side
+sudo apt install nfs-common
+sudo mkdir /nfs_client
+sudo chmode 777 /nfs_client
+sudo mount ip_address:/nfs_share /nfs_client
+cd nfs/cient
+ls

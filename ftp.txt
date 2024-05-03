@@ -1,0 +1,23 @@
+####server config
+sudo install vsftpd
+sudo nano /etc/vsftpd.conf
+// uncommend write_enable
+sudo service vsftpd restart
+sudo adduser ftpuser
+// give permission to ftpuser using sudo chmod 777 ftpuser
+cd ftpuser
+touch file1 file2 file3
+sudo apt install net-tools
+ifconfig
+
+####client side
+mkdir client
+cd client
+ftp ip_address
+get file1 // single receive
+mget file2 file3 // multiple receive
+touch f1 f2 f3
+put f1 // single send
+mput f2 f3 // multiple send
+bye
+
