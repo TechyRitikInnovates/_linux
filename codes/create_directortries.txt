@@ -1,0 +1,7 @@
+read -p "Enter the Diretory Names sperate by spaces: " directories
+
+for dir in $directories; do
+mkdir -p "$dir"
+echo "Directory "$dir" created"
+
+done

@@ -1,0 +1,19 @@
+echo "Currently Logged User: $(whoami)"
+
+echo "Logname: $(logname)"
+
+echo "Current Shell: $SHELL"
+
+echo "Home Directory: $HOME"
+
+echo "Operating System Type: $(uname -o)"
+
+echo "Current Setting Path: $PATH"
+
+echo "Current Working Directory: $(pwd)"
+
+echo "Curren Logged Users: $(who | wc -l)"
+
+echo "Memory Information : $(free -h)"
+
+echo "File System Mounted: $(df -h)"

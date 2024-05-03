@@ -1,0 +1,6 @@
+if [ "(id -u) -eq 0" ]; then
+echo "You are the Root User"
+
+else
+echo "You are not the Root User"
+fi

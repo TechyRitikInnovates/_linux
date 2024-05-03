@@ -1,0 +1,7 @@
+name=$(whoami)
+hostname=$(hostname)
+current_time=$(date +"%T")
+
+echo "Hello '$name'! Good to see you,"
+echo "You are Currently Logged in to '$hostname'"
+echo "The Current time is '$current_time'"

@@ -1,0 +1,5 @@
+hostname=$1
+ip_address=$2
+sudo sed -i "$ a $ip_address $hostname" /etc/hosts
+
+echo "Hostname '$hostname' with IP address '$ip_address' added to /etc/hosts file."

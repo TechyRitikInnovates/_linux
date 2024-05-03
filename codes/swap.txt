@@ -1,0 +1,10 @@
+read -p "Enter two numbers separated by space:" num1 num2
+
+# Swap numbers without using a third variable
+num1=$((num1 + num2))
+num2=$((num1 - num2))
+num1=$((num1 - num2))
+
+echo "Numbers after swapping: $num1 $num2"
+
+

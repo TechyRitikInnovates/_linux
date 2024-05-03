@@ -1,0 +1,7 @@
+echo "All Arguments: "
+
+for args in "$@"; do
+echo "$args"
+done
+
+

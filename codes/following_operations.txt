@@ -1,0 +1,56 @@
+read -p "Enter filename: " filename
+
+echo "1. Check if file is a named pipe"
+if [ -p "$filename" ]; then
+    echo "   File is a named pipe."
+else
+    echo "   File is not a named pipe."
+fi
+
+echo "2. Check if file descriptor is open and associated with a terminal"
+if [ -t "$filename" ]; then
+    echo "   File descriptor is open and associated with a terminal."
+else
+    echo "   File descriptor is not open or not associated with a terminal."
+fi
+
+echo "3. Check if file has its Set User ID (SUID) bit set"
+if [ -u "$filename" ]; then
+    echo "   File has its Set User ID (SUID) bit set."
+else
+    echo "   File does not have its Set User ID (SUID) bit set."
+fi
+
+echo "4. Check if file is readable"
+if [ -r "$filename" ]; then
+    echo "   File is readable."
+else
+    echo "   File is not readable."
+fi
+
+echo "5. Check if file is writable"
+if [ -w "$filename" ]; then
+    echo "   File is writable."
+else
+    echo "   File is not writable."
+fi
+
+echo "6. Check if file is executable"
+if [ -x "$filename" ]; then
+    echo "   File is executable."
+else
+    echo "   File is not executable."
+fi
+echo "7. Check if file has size greater than 0"
+if [ -s "$filename" ]; then
+    echo "   File has size greater than 0."
+else
+    echo "   File does not have size greater than 0."
+fi
+
+echo "8. Check if file exists"
+if [ -e "$filename" ]; then
+    echo "   File exists."
+else
+    echo "   File does not exist."
+fi

@@ -1,0 +1,35 @@
+Here's how you can accomplish each of the tasks using the wc command:
+
+A. Display Line, Word, and Character count in a file:
+bash
+wc file.txt
+
+
+B. Count Number of Lines in a File:
+bash
+wc -l file.txt
+
+
+C. Count Number of Words in a File:
+bash
+wc -w file.txt
+
+
+D. Count Number of Characters in a File:
+bash
+wc -m file.txt
+
+
+E. Count Number of Bytes in a File:
+bash
+wc -c file.txt
+
+
+F. Display Length of Longest Line in File:
+bash
+wc -L file.txt
+
+
+Replace file.txt with the name of the file you want to analyze.
+
+Each command will provide the respective count or length specified in the task.

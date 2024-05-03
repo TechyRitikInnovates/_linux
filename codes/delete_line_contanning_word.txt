@@ -1,0 +1,5 @@
+read -p "Enter the Word: " word
+read -p "Enter the Filename : " file
+sed -i "/$word/d" "$file"
+
+echo "Lines Containing '$word' from file '$file' is deleted"

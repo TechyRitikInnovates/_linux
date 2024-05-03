@@ -1,0 +1,7 @@
+if [ -d "/var/log" ]; then
+sudo rm /var/log/*.log
+echo "All Log Files are Deleted"
+
+else
+echo "Directory Does not exists"
+fi
