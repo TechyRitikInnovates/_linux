@@ -4,4 +4,4 @@ sudo ufw enable
 sudo ufw status
 ifconfig //copy inet of 2nd para
 cat>index.html
-firefox index.html
+firefox ip_address
